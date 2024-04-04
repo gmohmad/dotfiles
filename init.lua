@@ -1,39 +1,18 @@
--- Plugins with vim-plug
-vim.cmd([[
-	call plug#begin()
-
-
-	Plug 'vim-airline/vim-airline'
-
-	Plug 'hrsh7th/nvim-cmp'
-	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'hrsh7th/cmp-buffer'
-	Plug 'hrsh7th/cmp-path'
-
-	Plug 'neovim/nvim-lspconfig'
-
-	Plug 'numToStr/Comment.nvim'
-	Plug 'windwp/nvim-autopairs'
-	Plug 'kylechui/nvim-surround'
-
-	Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
-	Plug 'nvim-lua/plenary.nvim'
-
-	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-
-	call plug#end()
-]])
+-- Require the plugings and the remaps
+require('plug')
+require('remap')
 
 
 -- Plug configs
-require('lspconf')
-require('cmpconf')
-require('telescopeconf')
-require('toggletermconf')
-require('commentconf')
-require('catpuccinconf')
+require('_telescope')
+require('_toggleterm')
+require('_lsp')
+require('_cmp')
+require('_catppuccin')
+require('_comment')
 
+
+-- Other plugs that i didnt config
 require('nvim-autopairs').setup()
 require("nvim-surround").setup()
 
@@ -46,11 +25,32 @@ vim.g.netrw_liststyle = 3
 -- Set line numbers and relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+
+-- Dont like wrapping
+vim.opt.wrap = false
+
+
+-- Disable shada and swapfiles
+vim.opt.shadafile = "NONE"
 vim.opt.swapfile = false
 
 
 -- Enable mouse support
 vim.opt.mouse = "a"
+
+
+-- Search configs
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+
+-- Sets that vertical line you see on the right 
+vim.opt.colorcolumn = "120"
+
+
+-- Sets the scrolloff 
+vim.opt.scrolloff = 8
 
 
 -- Set tab settings
@@ -59,20 +59,12 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
 
--- Map 'jj' to exit insert mode
-vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true })
-
-
 -- Set clipboard to use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
 
 -- Set default colorscheme
 vim.cmd.colorscheme "catppuccin-mocha"
--- vim.cmd.colorscheme "habamax"
-
--- Set highlight color for Visual mode
-vim.cmd('highlight Visual guibg=#c4c4c2')
 
 
 -- Extra colors thing

@@ -16,7 +16,7 @@ require('telescope').setup{
 		find_files = {
 			hidden = true,
 			find_command = {'rg', '--ignore', '--hidden', '--files', '-u'},
-			file_ignore_patterns = { "venv" },
+			file_ignore_patterns = { "venv", ".git", "__pycache__", ".mypy_cache" },
 		}
 	}
 }
