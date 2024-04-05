@@ -3,13 +3,8 @@ require('plug')
 require('remap')
 
 
--- Plug configs
-require('_telescope')
-require('_toggleterm')
-require('_lsp')
-require('_cmp')
-require('_catppuccin')
-require('_comment')
+-- Require the plugin configurations
+require('plugconfigs')
 
 
 -- Other plugs that i didnt config
@@ -40,7 +35,7 @@ vim.opt.swapfile = false
 vim.opt.mouse = "a"
 
 
--- Search configs
+-- Search configuration 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 

@@ -1,0 +1,6 @@
+require("plugconfigs._cmp")
+require("plugconfigs._lsp")
+require("plugconfigs._toggleterm")
+require("plugconfigs._telescope")
+require("plugconfigs._comment")
+require("plugconfigs._catppuccin")
