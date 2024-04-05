@@ -4,6 +4,7 @@ vim.cmd([[
 
 
 	Plug 'vim-airline/vim-airline'
+	Plug 'okuuva/auto-save.nvim'
 
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
@@ -21,6 +22,7 @@ vim.cmd([[
 	Plug 'nvim-lua/plenary.nvim'
 
 	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
 
 	call plug#end()
 ]])
