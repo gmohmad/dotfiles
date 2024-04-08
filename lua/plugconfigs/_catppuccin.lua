@@ -66,8 +66,8 @@ require("catppuccin").setup({
 			surface0 = "#292929",
 			mantle = "#191b1c",
 			crust = "#141617",
-            text = "#C1BEBE",
-            base = "#151515",
+            text = "#d1c9b6",--[[ "#C1BEBE", ]]
+            base = "#1c1c1c",--[[ "#151515", ]]
 		},
 	},
     custom_highlights = {},

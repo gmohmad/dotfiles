@@ -7,11 +7,6 @@ require('remap')
 require('plugconfigs')
 
 
--- Other plugs that i didnt config
-require('nvim-autopairs').setup()
-require("nvim-surround").setup()
-
-
 -- Built in file explorer config
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3

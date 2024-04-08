@@ -5,6 +5,7 @@ vim.cmd([[
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'okuuva/auto-save.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'

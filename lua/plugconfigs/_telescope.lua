@@ -1,5 +1,6 @@
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
+
 local state = require("telescope.state")
 local action_state = require("telescope.actions.state")
 
@@ -26,8 +27,12 @@ require('telescope').setup{
 
 			    ["<C-e>"] = function(bufnr) slow_scroll(bufnr, 1) end,
 			    ["<C-y>"] = function(bufnr) slow_scroll(bufnr, -1) end,
-			}
-		}
+			},
+		},
+		layout_config = {
+			horizontal = { width = 0.9 },
+			preview_width = 0.55,
+		},
 	},
 	pickers = {
 		find_files = {
