@@ -12,6 +12,10 @@ vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
 
+-- Set the cursor line
+vim.opt.cursorline = true
+
+
 -- Set line numbers and relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true

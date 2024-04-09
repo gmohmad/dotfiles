@@ -8,7 +8,6 @@ require("plugconfigs._catppuccin")
 require("plugconfigs._auto-save")
 
 -- Default plug configs
-require('nvim-autopairs').setup()
+require("nvim-autopairs").setup()
 require("nvim-surround").setup()
-
 
