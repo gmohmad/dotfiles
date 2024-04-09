@@ -1,10 +1,19 @@
+-- Move the selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
--- Move the selected lines up and down
 
 
 -- Remap Esc to jj to enter normal mode
-vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true })
+vim.keymap.set('i', 'jj', '<Esc>')
+
+
+-- Set buffer navigation remaps
+vim.keymap.set("n", "<Tab>", ":bn<CR>")
+vim.keymap.set("n", "<BS>", ":bp<CR>")
+
+
+-- Select all from current buffer
+vim.keymap.set("n", "<C-a>", "ggVG")
 
 
 -- Ctrl+p not to loose the stuff youre pasting over with
