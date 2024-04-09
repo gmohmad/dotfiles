@@ -16,5 +16,10 @@ vim.keymap.set("n", "<BS>", ":bp<CR>")
 vim.keymap.set("n", "<C-a>", "ggVG")
 
 
+-- Keymaps for using system clipboard
+vim.keymap.set("n", ",y", '"+y')
+vim.keymap.set("n", ",p", '"+p')
+
+
 -- Ctrl+p not to loose the stuff youre pasting over with
 vim.keymap.set("x", "<C-p>", "\"_dP")

@@ -49,10 +49,6 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
 
--- Set clipboard to use system clipboard
-vim.opt.clipboard = "unnamedplus"
-
-
 -- Set default colorscheme
 vim.cmd.colorscheme "catppuccin-mocha"
 
