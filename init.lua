@@ -9,7 +9,6 @@ require('plugconfigs')
 
 -- Built in file explorer config
 vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
 
 
 -- Set the cursor line
@@ -59,3 +58,10 @@ vim.cmd.colorscheme "catppuccin-mocha"
 
 -- Extra colors thing
 vim.opt.termguicolors = true
+
+
+-- Live updates
+vim.cmd[[
+  autocmd BufEnter * checktime
+]]
+

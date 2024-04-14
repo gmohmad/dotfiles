@@ -48,6 +48,7 @@ vim.keymap.set('n', ',f', builtin.find_files, {})
 vim.keymap.set('n', ',l', builtin.live_grep, {})
 vim.keymap.set('n', ',g', builtin.git_commits, {})
 vim.keymap.set('n', ',b', builtin.buffers, {})
+vim.keymap.set('n', ',r', builtin.lsp_references, {})
 
 vim.keymap.set('n', ',h', builtin.help_tags, {})
 vim.keymap.set('x', ',h', builtin.help_tags, {})

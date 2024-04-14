@@ -39,12 +39,21 @@ vim.keymap.set('i', 'jj', '<Esc>')
 
 
 -- Set buffer navigation remaps
-vim.keymap.set("n", "<Tab>", ":bn<CR>")
-vim.keymap.set("n", "<BS>", ":bp<CR>")
+vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<BS>', ':bprev<CR>', { noremap = true, silent = true })
 
 
 -- Select all from current buffer
 vim.keymap.set("n", "<C-a>", "ggVG")
+
+
+-- Remap semicolon to enter command mode
+vim.keymap.set("n", ";", ":")
+
+
+-- Keymaps to add lines above or under in normal mode
+vim.keymap.set("n", "-", "O<Esc>")
+vim.keymap.set("n", "+", "o<Esc>")
 
 
 -- Keymaps for using system clipboard
