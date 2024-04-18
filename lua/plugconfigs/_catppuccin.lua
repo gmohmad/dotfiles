@@ -1,13 +1,9 @@
 require("catppuccin").setup({
-  --   highlight_overrides = {
-		-- mocha = function(colors)
-		-- 	return {
-		-- 		Type = { fg = colors.blue },
-		-- 		Statement = { fg = colors.red },
-		--         Conditional = { fg = colors.yellow },
-		-- 			}
-		-- 		end,
-		-- 	},
+	custom_highlights = function(colors)
+		return {
+			Directory = { fg = colors.lavender },
+		}
+	end,
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     -- flavour = "auto" -- will respect terminal's background
     background = { -- :h background
@@ -55,22 +51,21 @@ require("catppuccin").setup({
 			sky = "#89b482",
 			sapphire = "#89b482",
 			blue = "#7daea3",
-			lavender = "#7daea3",
+			lavender = "#C07A1C",
 			subtext1 = "#d5c4a1",
 			subtext0 = "#bdae93",
 			overlay2 = "#a89984",
 			overlay1 = "#928374",
 			overlay0 = "#595959",
 			surface2 = "#4d4d4d",
-			surface1 = "#686869",--[[  #5c5d5e", ]]
+			surface1 = "#686869",
 			surface0 = "#292929",
 			mantle = "#191b1c",
 			crust = "#141617",
-            text = "#d1c9b6",--[[ "#C1BEBE", ]]
-            base = "#1c1c1c",--[[ "#151515", ]]
+            text = "#d1c9b6",
+            base = "#000000"--[[ "#1c1c1c",  ]]
 		},
 	},
-    custom_highlights = {},
     default_integrations = true,
     integrations = {
         cmp = true,

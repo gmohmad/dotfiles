@@ -33,6 +33,11 @@ vim.opt.swapfile = false
 vim.opt.mouse = "a"
 
 
+-- how splits should be opened 
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+
 -- Search configuration 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

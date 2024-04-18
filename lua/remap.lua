@@ -57,11 +57,11 @@ vim.keymap.set("n", "+", "o<Esc>")
 
 
 -- Keymaps for using system clipboard
-vim.keymap.set("n", ",y", '"+y')
-vim.keymap.set("n", ",p", '"+p')
+vim.keymap.set("n", "<Space>y", '"+y')
+vim.keymap.set("n", "<Space>p", '"+p')
 
-vim.keymap.set("v", ",y", '"+y')
-vim.keymap.set("v", ",p", '"+p')
+vim.keymap.set("v", "<Space>y", '"+y')
+vim.keymap.set("v", "<Space>p", '"+p')
 
 
 -- Ctrl+p not to loose the stuff youre pasting over with
