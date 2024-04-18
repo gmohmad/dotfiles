@@ -8,6 +8,6 @@ require("toggleterm").setup{
   direction = "float", -- the direction in which the terminal opens
   float_opts = {
     border = 'curved', -- 'shadow' | 'curved' 
-    winblend = 40,
+    winblend = 20,
   },
 }

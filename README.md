@@ -42,4 +42,4 @@ Open Neovim and run the following command to install all the plugins listed in t
 ```
 ## Done! It's that easy/
 
-#### *If you want to adjust some plugin configs or key mappings, all the plugin configuraions/plugin remaps are here ./lua/plugconfigs/, and general remaps are here ./lua/remap.lua
+*If you want to adjust some plugin configs or key mappings, all the plugin configuraions/plugin remaps are here ./lua/plugconfigs/, and general remaps are here ./lua/remap.lua
