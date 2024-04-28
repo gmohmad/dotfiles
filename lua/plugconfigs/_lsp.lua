@@ -9,10 +9,13 @@ lspconfig.pyright.setup{
 lspconfig.gopls.setup{
 	capabilities = lsp_capabilities,
 }
+lspconfig.tsserver.setup{
+	capabilities = lsp_capabilities,
+}
 
 
 vim.diagnostic.config({
-    virtual_text = true,
+    virtual_text = { prefix = "■", },
     signs = false,
     update_in_insert = true,
     underline = true,
@@ -57,3 +60,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+vim.cmd('highlight link LspDiagnosticsVirtualTextError Error')

@@ -10,6 +10,9 @@ Plug('vim-airline/vim-airline')
 Plug ('okuuva/auto-save.nvim')
 Plug ('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
+
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-buffer')

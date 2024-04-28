@@ -1,4 +1,4 @@
-require('comment').setup{
+require('Comment').setup{
     toggler = {
         -- -line-comment toggle keymap
         line = 'gs',
