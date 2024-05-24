@@ -69,4 +69,3 @@ vim.opt.termguicolors = true
 vim.cmd[[
   autocmd BufEnter * checktime
 ]]
-

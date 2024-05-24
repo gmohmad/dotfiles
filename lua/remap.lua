@@ -37,6 +37,11 @@ vim.api.nvim_set_keymap('v', 'K', [[:lua move_lines_up_visual()<cr>]], { noremap
 vim.keymap.set('i', 'jj', '<Esc>')
 
 
+-- Ctrl + u/d mappings
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
+
 -- Set buffer navigation remaps
 vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<BS>', ':bprev<CR>', { noremap = true, silent = true })
