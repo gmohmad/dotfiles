@@ -38,12 +38,14 @@ require('telescope').setup{
 		find_files = {
 			hidden = true,
 			find_command = {'rg', '--ignore', '--hidden', '--files', '-u'},
-			file_ignore_patterns = { "venv", ".git", "__pycache__", ".mypy_cache" },
+			-- TODO: ".git" pattern ignores files like .gitlab-ci.yml, gotta fix this
+			file_ignore_patterns = { "venv", "vendor/", ".git", "__pycache__", ".mypy_cache" },
 		}
 	}
 }
 
 
+vim.keymap.set('n', ',d', builtin.diagnostics, {})
 vim.keymap.set('n', ',f', builtin.find_files, {})
 vim.keymap.set('n', ',l', builtin.live_grep, {})
 vim.keymap.set('n', ',g', builtin.git_commits, {})

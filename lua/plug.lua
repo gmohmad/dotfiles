@@ -7,8 +7,14 @@ vim.call('plug#begin')
 
 
 Plug('vim-airline/vim-airline')
-Plug ('okuuva/auto-save.nvim')
-Plug ('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+Plug('okuuva/auto-save.nvim')
+ 
+Plug('mfussenegger/nvim-dap')
+Plug('leoluz/nvim-dap-go')
+Plug('rcarriga/nvim-dap-ui')
+Plug('nvim-neotest/nvim-nio')
+
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')

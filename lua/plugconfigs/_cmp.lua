@@ -20,7 +20,7 @@ cmp.setup({
 	}),
 	  -- sources for autocompletion
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp", max_item_count=10}, -- LSP
+		{ name = "nvim_lsp", max_item_count=100}, -- LSP
 		{ name = "buffer" }, -- text within the current buffer, max_item_count, priority, keyword_length
 		{ name = "path" }, -- file system paths
 	}),

@@ -43,8 +43,8 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
 
 -- Set buffer navigation remaps
-vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<BS>', ':bprev<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Tab>', ':bp<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<BS>', ':bn<CR>', { noremap = true, silent = true })
 
 
 -- Select all from current buffer

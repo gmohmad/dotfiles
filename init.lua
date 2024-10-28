@@ -61,6 +61,9 @@ vim.opt.softtabstop = 4
 vim.cmd.colorscheme "catppuccin-mocha"
 
 
+-- Makes cursor thick in all modes
+-- vim.opt.guicursor = "n-v-i:block"
+
 -- Extra colors thing
 vim.opt.termguicolors = true
 
