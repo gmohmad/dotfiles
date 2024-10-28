@@ -32,7 +32,6 @@ end
 vim.api.nvim_set_keymap('v', 'J', [[:lua move_lines_down_visual()<cr>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'K', [[:lua move_lines_up_visual()<cr>]], { noremap = true, silent = true })
 
-
 -- Remap Esc to jj to enter normal mode
 vim.keymap.set('i', 'jj', '<Esc>')
 
