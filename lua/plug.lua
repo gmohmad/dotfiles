@@ -8,7 +8,7 @@ vim.call('plug#begin')
 
 Plug('vim-airline/vim-airline')
 Plug('okuuva/auto-save.nvim')
- 
+
 Plug('mfussenegger/nvim-dap')
 Plug('leoluz/nvim-dap-go')
 Plug('rcarriga/nvim-dap-ui')
@@ -31,7 +31,7 @@ Plug('windwp/nvim-autopairs')
 Plug('kylechui/nvim-surround')
 
 Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })
-Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.6' })
+Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.7' })
 Plug('nvim-lua/plenary.nvim')
 
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })

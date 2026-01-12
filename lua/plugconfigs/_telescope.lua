@@ -39,7 +39,7 @@ require('telescope').setup{
 			hidden = true,
 			find_command = {'rg', '--ignore', '--hidden', '--files', '-u'},
 			-- TODO: ".git" pattern ignores files like .gitlab-ci.yml, gotta fix this
-			file_ignore_patterns = { "venv", "vendor/", ".git", "__pycache__", ".mypy_cache" },
+			file_ignore_patterns = { "venv/", "vendor/", ".git/", "__pycache__/", ".mypy_cache/" },
 		}
 	}
 }
@@ -55,3 +55,23 @@ vim.keymap.set('n', ',r', builtin.lsp_references, {})
 vim.keymap.set('n', ',h', builtin.help_tags, {})
 vim.keymap.set('x', ',h', builtin.help_tags, {})
 
+
+local function telescope_black_bg()
+  local hl = vim.api.nvim_set_hl
+  hl(0, "TelescopeNormal",       { bg = "#000000" })
+  hl(0, "TelescopeBorder",       { bg = "#000000", fg = "#999999" })
+  hl(0, "TelescopePromptNormal", { bg = "#000000" })
+  hl(0, "TelescopePromptBorder", { bg = "#000000", fg = "#999999" })
+  hl(0, "TelescopeResultsNormal",{ bg = "#000000" })
+  hl(0, "TelescopePreviewNormal",{ bg = "#000000" })
+  hl(0, "NormalFloat",           { bg = "#000000" })
+	hl(0, "TelescopeSelection",       { fg = "#808080", bg = "#000000", bold = true })
+end
+
+-- apply now
+telescope_black_bg()
+
+-- and every time a colorscheme is set
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = telescope_black_bg,
+})

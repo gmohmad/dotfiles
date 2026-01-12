@@ -2,7 +2,8 @@ require('dap-go').setup({
     delve = {
         path = "/usr/bin/dlv",
         initialize_timeout_sec = 20,
-        port = "${port}"
+        port = "${port}",
+		build_flags = "-tags=search",
     }
 })
 
@@ -17,8 +18,8 @@ dap.listeners.before.event_exited["dapui_config"]=function()
   dapui.close()
 end
 
-vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
-vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
+vim.fn.sign_define('DapBreakpoint',{ text ='●', texthl ='', linehl ='', numhl =''})
+vim.fn.sign_define('DapStopped',{ text ='▶', texthl ='', linehl ='', numhl =''})
 
 vim.keymap.set('n', '<F1>', dap.continue)
 vim.keymap.set('n', '<F2>', dap.step_into)

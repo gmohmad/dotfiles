@@ -1,6 +1,7 @@
 -- Require the plugings and the remaps
 require('plug')
 require('remap')
+require('commands')
 
 
 -- Require the plugin configurations
@@ -27,6 +28,10 @@ vim.opt.wrap = false
 -- Disable shada and swapfiles
 vim.opt.shadafile = "NONE"
 vim.opt.swapfile = false
+
+
+-- Maximum line length for syntax highlight
+vim.opt.synmaxcol = 300
 
 
 -- Enable mouse support
@@ -61,12 +66,15 @@ vim.opt.softtabstop = 4
 vim.cmd.colorscheme "catppuccin-mocha"
 
 
--- Makes cursor thick in all modes
--- vim.opt.guicursor = "n-v-i:block"
-
 -- Extra colors thing
 vim.opt.termguicolors = true
 
+
+-- Cursor settings
+vim.cmd([[
+  highlight Cursor guibg=#d1c9b6
+  set guicursor=n-v-c-i:lock-Cursor/lCursor
+]])
 
 -- Live updates
 vim.cmd[[
