@@ -1,0 +1,57 @@
+#!/bin/bash
+# PulseAudio microphone status for i3blocks
+# With volume clamping (0% - 100%)
+
+STEP=5   # Change this to adjust how much each click adjusts
+
+# Find the default source (microphone)
+DEFAULT_SOURCE=$(pactl info | grep 'Default Source' | cut -d' ' -f3)
+
+# If no source found, exit
+if [[ -z "$DEFAULT_SOURCE" ]]; then
+    echo "no mic"
+fi
+
+# --- Function to get current volume as integer (0-100) ---
+get_volume() {
+    pactl get-source-volume "$DEFAULT_SOURCE" \
+        | grep -oP '\d+(?=%)' \
+        | head -1
+}
+
+# --- Button handling with clamping ---
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+    # Left click: increase, but not above 100
+    curr=$(get_volume)
+    if [[ -z "$curr" ]]; then curr=0; fi
+    new=$((curr + STEP))
+    if [[ $new -gt 100 ]]; then new=100; fi
+    pactl set-source-volume "$DEFAULT_SOURCE" "${new}%"
+
+elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+    # Middle click: toggle mute
+    pactl set-source-mute "$DEFAULT_SOURCE" toggle
+
+elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+    # Right click: decrease, but not below 0
+    curr=$(get_volume)
+    if [[ -z "$curr" ]]; then curr=0; fi
+    new=$((curr - STEP))
+    if [[ $new -lt 0 ]]; then new=0; fi
+    pactl set-source-volume "$DEFAULT_SOURCE" "${new}%"
+fi
+
+# --- Get current state for display ---
+MUTE=$(pactl get-source-mute "$DEFAULT_SOURCE" | awk '{print $2}')
+VOLUME=$(get_volume)
+
+# --- Output for i3blocks ---
+if [[ "$MUTE" == "yes" ]]; then
+    echo "off"
+else
+    if [[ -n "$VOLUME" ]]; then
+        echo "${VOLUME}%"
+    else
+        echo "on"
+    fi
+fi

@@ -1,0 +1,7 @@
+configuration {
+	kb-cancel: "Alt+[40]";
+	lines: 5;
+	drun-parse-user: true;
+}
+
+@theme "glue_pro_blue"
