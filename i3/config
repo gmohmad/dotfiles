@@ -263,12 +263,14 @@ bar {
 # bindsym $mod+shift+x exec i3lock --color "$base01"
 bindcode $mod+shift+53 exec i3lock --color "$base01"
 
-bindsym Print exec --no-startup-id sh -c 'sleep 0.1 && scrot -s "%Y-%m-%d_%H-%M-%S_selection.png" -e "mv \$f ~/Pictures/Screenshots/"'
+# bindsym Print exec --no-startup-id sh -c 'sleep 0.2 && scrot -s "Screenshot from %Y-%m-%d %H-%M-%S.png" -e "mv \$f ~/Pictures/Screenshots/"'
+bindsym Print exec --no-startup-id flameshot gui
 
 exec_always --no-startup-id setxkbmap -layout us,ru -option "grp:win_space_toggle,ctrl:nocaps"
 exec_always feh --bg-scale ~/Downloads/plane.jpg
 exec_always --no-startup-id "xrdb -merge ~/.Xresources"
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id dunst
 
 exec gnome-terminal
 exec brave-browser
