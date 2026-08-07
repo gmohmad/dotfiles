@@ -134,7 +134,7 @@ bindcode $mod+38 focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Termial"
 set $ws2 "2: Browser"
-set $ws3 "3: Lens"
+set $ws3 "3: K9S"
 set $ws4 "4: Telegram"
 set $ws5 "5"
 set $ws6 "6"
@@ -170,7 +170,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # assign
 # assign [class="Gnome-terminal"] $ws1
 assign [class="Brave-browser"] $ws2
-assign [class="Lens"] $ws3
+assign [class="K9s"] $ws3
 assign [class="TelegramDesktop"] $ws4
 
 # reload the configuration file
@@ -274,5 +274,6 @@ exec_always --no-startup-id dunst
 
 exec gnome-terminal
 exec brave-browser
-exec ~/.local/bin/lens --no-sandbox
-exec telegram-desktop
+exec --no-startup-id gnome-terminal --class=K9s -- k9s
+# exec ~/.local/bin/lens --no-sandbox
+# exec telegram-desktop

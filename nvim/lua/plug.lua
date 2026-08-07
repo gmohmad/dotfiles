@@ -13,8 +13,7 @@ Plug('mfussenegger/nvim-dap')
 Plug('leoluz/nvim-dap-go')
 Plug('rcarriga/nvim-dap-ui')
 Plug('nvim-neotest/nvim-nio')
-
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && npx --yes yarn install' })
 
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')
@@ -34,7 +33,10 @@ Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.7' })
 Plug('nvim-lua/plenary.nvim')
 
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
+
 
 
 vim.call('plug#end')

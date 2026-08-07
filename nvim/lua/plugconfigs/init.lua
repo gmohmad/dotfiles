@@ -6,8 +6,9 @@ require("plugconfigs._telescope")
 require("plugconfigs._comment")
 require("plugconfigs._catppuccin")
 require("plugconfigs._auto-save")
-require("plugconfigs._treesitter")
 require("plugconfigs._debugger")
+require("plugconfigs._treesitter")
+require("plugconfigs._markdown-preview")
 
 -- Default plug configs
 require("mason").setup()
